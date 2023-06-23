@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+    >
+    <RelativeLayout
+        android:id="@+id/driver_list_rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/app_color" >
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/driver_list_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/img_close"
+            android:paddingLeft="10dp"
+            android:text="Information"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/scccc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/driver_list_rl_header"
+        android:padding="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:layout_margin="@dimen/btm"
+android:weightSum="1" >
+
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/edtheight"
+    android:padding="10dp"
+    android:text=" Add Bin Tag"
+    android:gravity="left|center"
+    android:inputType="text"
+    android:drawableLeft="@drawable/addd"
+    android:textStyle="bold"
+    android:textColor="#000"
+    android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edtheight"
+        android:padding="10dp"
+        android:text=" Print"
+        android:layout_marginTop="5dp"
+        android:gravity="left|center"
+        android:inputType="text"
+        android:drawableLeft="@drawable/printt"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edtheight"
+        android:padding="10dp"
+        android:text=" Open all Bin Tag"
+        android:layout_marginTop="5dp"
+        android:gravity="left|center"
+        android:inputType="text"
+        android:drawableLeft="@drawable/downarrow"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edtheight"
+        android:padding="10dp"
+        android:text=" Hide all Bin Tag"
+        android:layout_marginTop="5dp"
+        android:gravity="left|center"
+        android:inputType="text"
+        android:drawableLeft="@drawable/uparrow"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+
+
+</LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.1" />
+        <entry key="../Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.15" />
+        <entry key="app/src/main/res/drawable/backkk.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/my_back.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/my_black.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/my_custom_background.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/my_custom_background_new.xml" value="0.17" />
+        <entry key="app/src/main/res/drawable/my_custom_edit.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/my_custom_grnp.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/my_custom_product.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/my_gray.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/my_round.xml" value="0.159" />
+        <entry key="app/src/main/res/drawable/my_title_background.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-land/activity_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-land/grn_bin_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-land/grn_bin_listsub.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-land/product_home_list.xml" value="0.1171875" />
+        <entry key="app/src/main/res/layout-land/subproduct_home_list.xml" value="0.18033509700176367" />
+        <entry key="app/src/main/res/layout-sw600dp-port/grn_bin_list.xml" value="0.5313351498637602" />
+        <entry key="app/src/main/res/layout-sw600dp-port/product_home_list.xml" value="0.1532983508245877" />
+        <entry key="app/src/main/res/layout-sw600dp-port/subproduct_home_list.xml" value="0.21237864077669902" />
+        <entry key="app/src/main/res/layout-sw600dp/grn_bin_list.xml" value="0.5" />
+        <entry key="app/src/main/res/layout-sw600dp/grn_bin_listsub.xml" value="0.21237864077669902" />
+        <entry key="app/src/main/res/layout-sw600dp/product_home_list.xml" value="0.4207221350078493" />
+        <entry key="app/src/main/res/layout-sw600dp/subproduct_home_list.xml" value="0.23946135831381732" />
+        <entry key="app/src/main/res/layout-sw720dp-port/grn_bin_list.xml" value="0.33" />
+        <entry key="app/src/main/res/layout-sw720dp-port/product_home_list.xml" value="0.15" />
+        <entry key="app/src/main/res/layout-sw720dp-port/subproduct_home_list.xml" value="0.11217948717948718" />
+        <entry key="app/src/main/res/layout-sw720dp/grn_bin_list.xml" value="0.11217948717948718" />
+        <entry key="app/src/main/res/layout-sw720dp/grn_bin_listsub.xml" value="0.11217948717948718" />
+        <entry key="app/src/main/res/layout-sw720dp/product_home_list.xml" value="0.10986328125" />
+        <entry key="app/src/main/res/layout-sw720dp/subproduct_home_list.xml" value="0.12861635220125786" />
+        <entry key="app/src/main/res/layout-sw800dp-port/product_home_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-sw800dp-port/subproduct_home_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-sw800dp/grn_bin_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-sw800dp/grn_bin_listsub.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-sw800dp/product_home_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-sw800dp/subproduct_home_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.18432971014492755" />
+        <entry key="app/src/main/res/layout/activity_fieldhome.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.23333333333333334" />
+        <entry key="app/src/main/res/layout/activity_homenew.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/activity_loginadmin.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.18432971014492755" />
+        <entry key="app/src/main/res/layout/add_details.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/add_fieldticket.xml" value="0.18432971014492755" />
+        <entry key="app/src/main/res/layout/field_home_list.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/grn_bin_list.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/grn_bin_listsub.xml" value="0.17291666666666666" />
+        <entry key="app/src/main/res/layout/list_help.xml" value="0.12270200940572894" />
+        <entry key="app/src/main/res/layout/product_home_list.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/row_load.xml" value="0.15208333333333332" />
+        <entry key="app/src/main/res/layout/spinner_list.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/subproduct_home_list.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/view_details.xml" value="0.18432971014492755" />
+        <entry key="app/src/main/res/xml/provider_paths.xml" value="0.14635416666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CUSTOM ALMONDS</string>
+  <!--  <string name="version_name">V2.6</string>-->
+    <string name="version_name">V4.1</string>
+    <string name="edt_user">User Name</string>
+    <string name="ent_comp_code">Enter Company Code</string>
+    <string name="edt_pwd">Password</string>
+    <string name="submit">    SUBMIT    </string>
+    <string name="search">    SEARCH    </string>
+    <string name="showall">    SHOWAll    </string>
+    <string name="enter_runno">    Enter Run No#    </string>
+    <string name="ent_userid">Enter User Id</string>
+    <string name="ent_password">Enter Password</string>
+</resources>
