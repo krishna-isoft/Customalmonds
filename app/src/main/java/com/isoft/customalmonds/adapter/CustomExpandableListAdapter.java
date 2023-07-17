@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.print.PrintAttributes;
@@ -49,7 +48,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -229,7 +227,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
                                                 300, 40, true, 3,
                                                 40);
                                         try {
-                                            createPDFtagsub(gksubsub,gksub,btMap);
+                                            createPDFtagsub(gksubsub,gksub,btMap,expandableListTitle.get(listPosition));
                                         } catch (IOException e) {
                                             e.printStackTrace();
                                         } catch (DocumentException e) {
@@ -373,7 +371,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
         TextView txtgrower;
         TextView txttype,txtrname;
         TextView txtvariety,txtfticket;
-        TextView txttotalwgt,txtdate,txtview;
+        TextView txttotalwgt,txtdate,txtview,txtcropyear;
         LinearLayout linhead;
         ImageView imgview,imgviewup,imgadd,imgprintz;
         LinearLayout linmain;
@@ -391,6 +389,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
        imgviewup=itemView.findViewById(R.id.img_viewup);
         txtview=  itemView.findViewById(R.id.txt_view);
         imgadd=  itemView.findViewById(R.id.img_add);
+        txtcropyear=itemView.findViewById(R.id.txt_cropyear);
         imgprintz=  itemView.findViewById(R.id.img_printz);
         linsubproduct=itemView.findViewById(R.id.lin_subproduct);
         linhead=itemView.findViewById(R.id.linhead);
@@ -399,6 +398,12 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
         txtrunid.setText(""+movieModel.getPid());
         txtgrower.setText(" :  "+movieModel.getGrower());
         txttype.setText(" :  "+movieModel.getType());
+        if(movieModel.getCrop_year() !=null && movieModel.getCrop_year().length()>0 &&
+                !movieModel.getCrop_year().contentEquals("null")) {
+            txtcropyear.setText(" : " + movieModel.getCrop_year());
+        }else{
+            txtcropyear.setText(" : ");
+        }
 
         txtrepname.setText(" :  "+movieModel.getRep_name());
         if(movieModel.getRanch_name() !=null && movieModel.getRanch_name().length()>0 &&
@@ -463,7 +468,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
         return true;
     }
 
-    public void createPDFtagsub(sub_grs_bin_tag gk, sub_production_response movieModel, Bitmap barcodemap) throws IOException, DocumentException {
+    public void createPDFtagsub(sub_grs_bin_tag gk, sub_production_response movieModel, Bitmap barcodemap, production_response production_response) throws IOException, DocumentException {
 
         //Document doc = new Document(PageSize.B7);
         Document doc = new Document(PageSize.A6);
@@ -490,7 +495,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             headyr.setWidthPercentage(100);
 
             PdfPCell cellyr;
-            cellyr = new PdfPCell(new Paragraph(""+ Calendar.getInstance().get(Calendar.YEAR)
+            cellyr = new PdfPCell(new Paragraph("Crop Year : "+ production_response.getCrop_year()
                     ,subfontsub));
             cellyr.setBorder(0);
             cellyr.setPaddingBottom(5);
@@ -510,7 +515,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
                 Image image = Image.getInstance(stream.toByteArray());
                 image.setAlignment(Element.ALIGN_CENTER);
                 // image.scaleToFit(190f, 30f);
-                image.scaleToFit(260f, 60f);
+                image.scaleToFit(260f, 50f);
                 doc.add(image);
             }
             catch(IOException ex)
@@ -1039,7 +1044,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             headyr.setWidthPercentage(100);
 
             PdfPCell cellyr;
-            cellyr = new PdfPCell(new Paragraph(""+Calendar.getInstance().get(Calendar.YEAR)
+            cellyr = new PdfPCell(new Paragraph("Crop Year : "+movieModel.getCrop_year()
                     ,subfontsub));
             cellyr.setBorder(0);
             cellyr.setPaddingBottom(5);
@@ -1059,7 +1064,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
                 Image image = Image.getInstance(stream.toByteArray());
                 image.setAlignment(Element.ALIGN_CENTER);
                 // image.scaleToFit(190f, 30f);
-                image.scaleToFit(260f, 60f);
+                image.scaleToFit(260f, 50f);
                 doc.add(image);
             }
             catch(IOException ex)

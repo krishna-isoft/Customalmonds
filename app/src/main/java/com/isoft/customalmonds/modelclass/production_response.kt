@@ -31,5 +31,7 @@ data class production_response(
     @SerializedName("sub_product")
     val sub_product: List<sub_production_response>,
     @SerializedName("rep_name")
-    var rep_name: String
+    var rep_name: String,
+    @SerializedName("crop_year")
+var crop_year: String
 )
