@@ -97,7 +97,12 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
         txttare.setText(" :  " + gk.getTare()+" Lb");
         txtnwt.setText(" :  " + gk.getNet_wt()+" Lb");
         txtgwt.setText(" :  " + gk.getGross_wt()+" Lb");
-        txtrepname.setText(" :  " + gk.getRep_name());
+        if(gk.getRep_name() !=null && gk.getRep_name().length()>0 &&
+                !gk.getRep_name().contentEquals("null")) {
+            txtrepname.setText(" :  " + gk.getRep_name());
+        }else{
+            txtrepname.setText(" :  ");
+        }
         typevalue.setText(" :  "+ gk.getType());
         //  movieModel.setViewstatus("0");
 
@@ -153,7 +158,12 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
                     txtfticket.setText(" :  "+gksub.getField_ticket());
                     txttotalwgt.setText(" :  "+gksub.getTotal_netwt());
                     txtdate.setText(" :  "+gksub.getCreated_date());
-                    txtrepnamesub.setText(" :  "+gksub.getRep_name());
+                    if(gksub.getRep_name() !=null && gksub.getRep_name().length()>0
+                            && !gksub.getRep_name().contentEquals("null")) {
+                        txtrepnamesub.setText(" :  " + gksub.getRep_name());
+                    }else{
+                        txtrepnamesub.setText(" :  ");
+                    }
                     //  movieModel.setViewstatus("0");
 
 
@@ -404,8 +414,12 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
         }else{
             txtcropyear.setText(" : ");
         }
-
-        txtrepname.setText(" :  "+movieModel.getRep_name());
+        if(movieModel.getRep_name() !=null && movieModel.getRep_name().length()>0 &&
+                !movieModel.getRep_name().contentEquals("null")) {
+            txtrepname.setText(" :  " + movieModel.getRep_name());
+        }else {
+            txtrepname.setText(" :  ");
+        }
         if(movieModel.getRanch_name() !=null && movieModel.getRanch_name().length()>0 &&
                 !movieModel.getRanch_name().contentEquals("null"))
         {
@@ -490,13 +504,13 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             PdfWriter.getInstance(doc, fOut);
             doc.open();
             Font subfontsub = FontFactory.getFont(FontFactory.HELVETICA, 9);
-
+            Font subfontsubx = FontFactory.getFont(FontFactory.HELVETICA_BOLD, 9);
             PdfPTable headyr = new PdfPTable(1);
             headyr.setWidthPercentage(100);
 
             PdfPCell cellyr;
             cellyr = new PdfPCell(new Paragraph("Crop Year : "+ production_response.getCrop_year()
-                    ,subfontsub));
+                    ,subfontsubx));
             cellyr.setBorder(0);
             cellyr.setPaddingBottom(5);
             cellyr.setHorizontalAlignment(Paragraph.ALIGN_LEFT);
@@ -1039,13 +1053,13 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             PdfWriter.getInstance(doc, fOut);
             doc.open();
             Font subfontsub = FontFactory.getFont(FontFactory.HELVETICA, 9);
-
+            Font subfontsubx = FontFactory.getFont(FontFactory.HELVETICA_BOLD, 9);
             PdfPTable headyr = new PdfPTable(1);
             headyr.setWidthPercentage(100);
 
             PdfPCell cellyr;
             cellyr = new PdfPCell(new Paragraph("Crop Year : "+movieModel.getCrop_year()
-                    ,subfontsub));
+                    ,subfontsubx));
             cellyr.setBorder(0);
             cellyr.setPaddingBottom(5);
             cellyr.setHorizontalAlignment(Paragraph.ALIGN_LEFT);
