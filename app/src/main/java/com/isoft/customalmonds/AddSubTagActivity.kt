@@ -520,9 +520,9 @@ if(!handlername.contentEquals("0")) {
                             Toast.LENGTH_LONG
                         ).show()
 
-//                        val intent =
-//                            Intent(this@AddSubTagActivity, HomeActivitynew::class.java)
-//                        startActivity(intent)
+                        val intent =
+                            Intent(this@AddSubTagActivity, Listproduct::class.java)
+                        startActivity(intent)
                         finish()
 
 
@@ -684,7 +684,9 @@ if(!handlername.contentEquals("0")) {
             PdfWriter.getInstance(doc, fOut)
             doc.open()
            // val mainheadin = Font(Font.TIMES_ROMAN, 12.0f, Font.BOLD, Color.black)
-            var subfontsub = FontFactory.getFont(FontFactory.HELVETICA, 9f)
+            val subfontsub = FontFactory.getFont(FontFactory.HELVETICA, 9f)
+
+            val subfontsubxx = FontFactory.getFont(FontFactory.HELVETICA_BOLD, 9f)
 
             val headyr = PdfPTable(1)
             headyr.widthPercentage = 100f
@@ -692,7 +694,7 @@ if(!handlername.contentEquals("0")) {
             val cellyr: PdfPCell
             cellyr = PdfPCell(
                 Paragraph(
-                    "" + Calendar.getInstance()[Calendar.YEAR], subfontsub
+                    "Crop Year : " + Calendar.getInstance()[Calendar.YEAR], subfontsubxx
                 )
             )
             cellyr.border = 0
@@ -1153,20 +1155,20 @@ doc.add(lhtab0)
                     e.printStackTrace()
                 }
                 val lhcell9zaz: PdfPCell
-                lhcell9zaz = PdfPCell(Paragraph("Bin Stamp No.: "+slid,subfontsub))
+                lhcell9zaz = PdfPCell(Paragraph("Bin Stamp No:"+slid,subfontsub))
                 lhcell9zaz.horizontalAlignment = Paragraph.ALIGN_LEFT
                 lhcell9zaz.colspan = 3
                 lhcell9zaz.border = 0
-                lhcell9zaz.setPadding(2f)
+               // lhcell9zaz.setPadding(2f)
                 lhcell9zaz.paddingBottom = 7f
                 lhtab3.addCell(lhcell9zaz)
                 val lhcell9za: PdfPCell
-                lhcell9za = PdfPCell(Paragraph("Date Time: " + parseDateToddMMyyyy(dateyy)+" | "+sdfs.format(dt),subfontsub))
+                lhcell9za = PdfPCell(Paragraph("Date Time:" + parseDateToddMMyyyy(dateyy)+" | "+sdfs.format(dt),subfontsub))
                 lhcell9za.horizontalAlignment = Paragraph.ALIGN_RIGHT
                 lhcell9za.colspan = 5
                 lhcell9za.border = 0
                 lhcell9za.paddingBottom = 7f
-                lhcell9za.setPadding(2f)
+                //lhcell9za.setPadding(2f)
                 lhtab3.addCell(lhcell9za)
                 doc.add(lhtab3)
             }
@@ -1207,7 +1209,7 @@ doc.add(lhtab0)
     override fun onBackPressed() {
         super.onBackPressed()
 //        val intent =
-//            Intent(this@AddSubTagActivity, HomeActivitynew::class.java)
+//            Intent(this@AddSubTagActivity, Listproduct::class.java)
 //        startActivity(intent)
         finish()
     }
@@ -1242,8 +1244,10 @@ doc.add(lhtab0)
         var str = ""
         val selectedId: Int = rbgroup.getCheckedRadioButtonId()
         if (selectedId == rb_meet.getId()) {
+            type="MEATS"
             return "1"
         } else if (selectedId == rb_inshell.getId()) {
+            type="INSHELL"
             return "2"
         }
         return str
@@ -1254,8 +1258,12 @@ doc.add(lhtab0)
         val sharedPreferences: SharedPreferences = this.getSharedPreferences(sharedPrefFile,
             Context.MODE_PRIVATE)
         val resumestatus = sharedPreferences.getString("resumsstatus","0")
+        Log.e("resumestatus","#"+resumestatus)
         if(resumestatus.contentEquals("2"))
         {
+        val intent =
+            Intent(this@AddSubTagActivity, Listproduct::class.java)
+        startActivity(intent)
 finish()
         }
     }

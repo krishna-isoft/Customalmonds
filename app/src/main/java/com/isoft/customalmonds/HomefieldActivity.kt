@@ -138,6 +138,7 @@ class HomefieldActivity : AppCompatActivity() {
 
             val api = RetrofitHelper.getInstance().create(AlmondsApi::class.java)
             // Log.e("dccc","@"+dc);2019-01-14
+            //Log.e("burl","http://customalmonds.com/web_app/search_field_ticket.php?cc="+sharedNameValue+"&id="+idval+"&user_id="+userid)
             val call: Call<List<field_response>?>? =
                 api.getfieldvaluesearch(sharedNameValue,idval,userid)
             if (call != null) {

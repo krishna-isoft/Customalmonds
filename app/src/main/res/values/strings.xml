@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">CUSTOM ALMONDS</string>
   <!--  <string name="version_name">V2.6</string>-->
-    <string name="version_name">V4.2</string>
+    <string name="version_name">V4.3.3</string>
     <string name="edt_user">User Name</string>
     <string name="ent_comp_code">Enter Company Code</string>
     <string name="edt_pwd">Password</string>
